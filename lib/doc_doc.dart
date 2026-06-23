@@ -22,6 +22,7 @@ class DocApp extends StatelessWidget {
           scaffoldBackgroundColor: const Color(0xFFFFFFFF),
         ),
         initialRoute: Routes.OnBOARDING
+        
       ),
 
     
