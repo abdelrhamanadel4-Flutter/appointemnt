@@ -1,5 +1,6 @@
 import 'package:appointemnt/core/Helpers/custom_elveted_buttom.dart';
 import 'package:appointemnt/core/Helpers/extensions.dart';
+import 'package:appointemnt/core/Routing/routes.dart';
 import 'package:appointemnt/core/Theming/app_color.dart';
 import 'package:appointemnt/features/onborading/widgets/DoctorImageandText.dart';
 import 'package:flutter/material.dart';
@@ -16,7 +17,10 @@ class OnBoardingScreen extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              SizedBox(height: 20.h),
+
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -26,28 +30,35 @@ class OnBoardingScreen extends StatelessWidget {
                     "DocDoc",
                     style: TextStyle(
                       fontSize: 20.sp,
-                      fontWeight: FontWeight.w600,
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
                 ],
               ),
               SizedBox(height: 20.h),
               const DoctorImageandText(),
-              Text(
-                'Manage and schedule all of your medical appointments easily with Docdoc to get a new experience.',
-                textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 13.sp, color: AppColor.gray),
-              ),
-              SizedBox(height: 20.h),
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 5.w),
+                padding: EdgeInsets.symmetric(horizontal: 20.w),
+                child: Text(
+                  'Manage and schedule all of your medical appointments easily with Docdoc to get a new experience.',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 13.sp, color: AppColor.gray),
+                ),
+              ),
+              SizedBox(height: 40.h),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 20.w),
                 child: CustomElevatedButton(
                   onPressed: () {
-                    context.pushNamed('/login');
+                    context.pushNamed(Routes.home);
                   },
                   text: 'Get Started',
                   backgroundColor: AppColor.primaryColor,
-                  textStyle: TextStyle(fontSize: 13.sp, color: Colors.white),
+                  textStyle: TextStyle(
+                    fontSize: 16.sp,
+                    color: Colors.white,
+                    fontWeight: FontWeight.w700,
+                  ),
                 ),
               ),
             ],
