@@ -23,7 +23,7 @@ class DoctorImageandText extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 32.sp,
                   fontWeight: FontWeight.bold,
-                  color: AppColor.primaryColor,
+                  color: ColorsManager.primaryColor,
                 ),
                 textAlign: TextAlign.center,
               ),

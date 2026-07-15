@@ -1,4 +1,4 @@
-import 'package:appointemnt/core/Helpers/custom_elveted_buttom.dart';
+import 'package:appointemnt/core/Widgets/custom_elveted_buttom.dart';
 import 'package:appointemnt/core/Helpers/extensions.dart';
 import 'package:appointemnt/core/Routing/routes.dart';
 import 'package:appointemnt/core/Theming/app_color.dart';
@@ -42,18 +42,18 @@ class OnBoardingScreen extends StatelessWidget {
                 child: Text(
                   'Manage and schedule all of your medical appointments easily with Docdoc to get a new experience.',
                   textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 13.sp, color: AppColor.gray),
+                  style: TextStyle(fontSize: 13.sp, color: ColorsManager.gray),
                 ),
               ),
               SizedBox(height: 40.h),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 20.w),
-                child: CustomElevatedButton(
+                child: AppTextButton(
                   onPressed: () {
-                    context.pushNamed(Routes.home);
+                    context.pushNamed(Routes.loginScreen);
                   },
-                  text: 'Get Started',
-                  backgroundColor: AppColor.primaryColor,
+                  buttonText: 'Get Started',
+                  backgroundColor: ColorsManager.primaryColor,
                   textStyle: TextStyle(
                     fontSize: 16.sp,
                     color: Colors.white,
