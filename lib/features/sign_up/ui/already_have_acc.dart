@@ -5,17 +5,17 @@ import 'package:appointemnt/core/Theming/styles.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/widgets.dart';
 
-class AlreadyHaveAcc extends StatelessWidget {
+class AlreadyHaveAccSingnup extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
       child: RichText(
         text: TextSpan(
-          text: 'Don\'t have an account?',
+          text: 'Already have an account yet ? ',
           style: TextStyles.font13DarkBlueRegular,
           children: [
             TextSpan(
-              text: 'Sign Up',
+              text: 'Sign In',
               style: TextStyles.font13BlueSemiBold,
               recognizer: TapGestureRecognizer()
                 ..onTap = () {

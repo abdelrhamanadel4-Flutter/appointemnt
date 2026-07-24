@@ -6,7 +6,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class DocApp extends StatelessWidget {
   final AppRouter appRouter;
-  DocApp({super.key,required this.appRouter});
+  DocApp({super.key, required this.appRouter});
 
   @override
   Widget build(BuildContext context) {
@@ -21,11 +21,8 @@ class DocApp extends StatelessWidget {
           primaryColor: ColorsManager.primaryColor,
           scaffoldBackgroundColor: const Color(0xFFFFFFFF),
         ),
-        initialRoute: Routes.OnBOARDING
-        
+        initialRoute: Routes.homeScreen,
       ),
-
-    
     );
   }
 }

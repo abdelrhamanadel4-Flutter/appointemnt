@@ -3,9 +3,21 @@ import 'package:appointemnt/features/sign_up/data/models/sign_up_requset_body.da
 import 'package:appointemnt/features/sign_up/data/repo/sign_up_repo.dart';
 import 'package:appointemnt/features/sign_up/logic/cubit/sign_up_state.dart';
 import 'package:bloc/bloc.dart';
+import 'package:flutter/material.dart';
 
 class SignupCubit extends Cubit<SignupState> {
   SignUpRepo _signUpRepo;
+  final formKey = GlobalKey<FormState>();
+  final TextEditingController  emailController = TextEditingController();
+  final  TextEditingController passwordController = TextEditingController();
+   final  TextEditingController passwordConfirmController = TextEditingController();
+  final  TextEditingController phoneController = TextEditingController();
+    final TextEditingController  nameController = TextEditingController();
+
+
+
+
+
   SignupCubit(this._signUpRepo) : super(SignupState.initial());
   Future<void> SignUp(SignUpRequestBody signuprequsetbody) async {
     final result = await _signUpRepo.SignUp(signuprequsetbody);

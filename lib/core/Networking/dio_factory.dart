@@ -15,17 +15,16 @@ class DioFactory {
         ..options.connectTimeout = timeOut
         ..options.receiveTimeout = timeOut;
       addDioInterceptor();
+      addDioHeader();
       return dio!;
     } else {
       return dio!;
     }
   }
 
-
-
-  static void setTokenIntoHeaderAfterLogin(String token) {
+  static void addDioHeader() {
     dio?.options.headers = {
-      'Authorization': 'Bearer $token',
+
     };
   }
 
@@ -39,3 +38,5 @@ class DioFactory {
     );
   }
 }
+
+

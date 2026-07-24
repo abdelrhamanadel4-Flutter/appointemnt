@@ -1,7 +1,11 @@
 class ApiConstants {
-  static const String baseUrl = 'https://vcare.integration25.com/api';
+ static const String baseUrl = 'https://jobicy.com/api/v2';
+  static const String job = '/remote-jobs';
+
   static const String login = '/auth/login';
   static const String signUp = '/auth/register';
+   // static const String baseUrl = 'https://vcare.integration25.com/api';
+
 }
 class ApiErrors {
   static const String badRequestError = "badRequestError";

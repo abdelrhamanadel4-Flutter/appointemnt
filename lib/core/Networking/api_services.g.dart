@@ -12,7 +12,7 @@ part of 'api_services.dart';
 
 class _ApiServices implements ApiServices {
   _ApiServices(this._dio, {this.baseUrl, this.errorLogger}) {
-    baseUrl ??= 'https://vcare.integration25.com/api';
+    baseUrl ??= 'https://jobicy.com/api/v2';
   }
 
   final Dio _dio;
@@ -70,6 +70,33 @@ class _ApiServices implements ApiServices {
     late SignUpResponse _value;
     try {
       _value = SignUpResponse.fromJson(_result.data!);
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options, response: _result);
+      rethrow;
+    }
+    return _value;
+  }
+
+  @override
+  Future<JopReponseModel> getJob() async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{};
+    const Map<String, dynamic>? _data = null;
+    final _options = _setStreamType<JopReponseModel>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/remote-jobs',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
+    final _result = await _dio.fetch<Map<String, dynamic>>(_options);
+    late JopReponseModel _value;
+    try {
+      _value = JopReponseModel.fromJson(_result.data!);
     } on Object catch (e, s) {
       errorLogger?.logError(e, s, _options, response: _result);
       rethrow;

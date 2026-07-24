@@ -1,15 +1,10 @@
 import 'package:appointemnt/core/Helpers/spacing.dart';
-import 'package:appointemnt/core/Theming/app_color.dart';
 import 'package:appointemnt/core/Theming/styles.dart';
-import 'package:appointemnt/features/login/data/models/login_requset_body.dart';
-import 'package:appointemnt/features/login/logic/cubit/login_cubit.dart';
 import 'package:appointemnt/features/login/ui/widgets/already_have_acc.dart';
 import 'package:appointemnt/features/login/ui/widgets/custom_from_filed.dart';
 import 'package:appointemnt/features/login/ui/widgets/login_bloc_listener.dart';
 import 'package:appointemnt/features/login/ui/widgets/term_condintion_text.dart';
 import 'package:flutter/material.dart';
-import 'package:custom_form_w/custom_form_w.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class LoginScreen extends StatelessWidget {
